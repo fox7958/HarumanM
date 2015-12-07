@@ -181,7 +181,7 @@ public class AddActivity extends AppCompatActivity implements NavigationView.OnN
                 }
                 Toast.makeText(AddActivity.this, townspin.getItem(position), Toast.LENGTH_SHORT).show();
 
-                if (townspin.getItem(position).equals("서울")) {
+                if (townspin.getItem(position).equals("서울시")) {
                     boroughspin = ArrayAdapter.createFromResource(AddActivity.this, R.array.spinner_borough_seoul, R.layout.support_simple_spinner_dropdown_item);
                     spinnerBorough.setAdapter(boroughspin);
 

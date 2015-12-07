@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         final Button btnAdd = (Button) findViewById(R.id.btn_add);
         final Button btnMylist = (Button) findViewById(R.id.btn_mylist);
 
-
         btnAdd.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -57,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
                     cardView2.setCardElevation(0.0f);
                 } else if(action == event.ACTION_UP){
                     cardView2.setCardElevation(backup);
+                    Intent intent = new Intent(MainActivity.this, ListActivity.class);
+                    startActivity(intent);
                 }
                 return true;
             }
