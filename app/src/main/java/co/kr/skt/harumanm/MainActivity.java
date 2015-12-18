@@ -11,6 +11,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button jsontest;
     float backup;
 
     @Override
@@ -19,6 +20,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        jsontest = (Button) findViewById(R.id.json123);
+
+        jsontest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListJson.class);
+                startActivity(intent);
+            }
+        });
 
         final CardView cardView1 = (CardView) findViewById(R.id.cardview1);
         final CardView cardView2 = (CardView) findViewById(R.id.cardview2);

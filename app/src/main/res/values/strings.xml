@@ -3,6 +3,146 @@
     <string name="action_settings">Settings</string>
     <string name="spinner">지역을 선택해주세요.</string>
 
+    <string-array name="year">
+        <item>1980</item>
+        <item>1981</item>
+        <item>1982</item>
+        <item>1983</item>
+        <item>1984</item>
+        <item>1985</item>
+        <item>1986</item>
+        <item>1987</item>
+        <item>1988</item>
+        <item>1989</item>
+        <item>1990</item>
+        <item>1991</item>
+        <item>1992</item>
+        <item>1993</item>
+        <item>1994</item>
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+    </string-array>
+
+    <string-array name="month">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="day_31">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="day_30">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+
+    <string-array name="day_29">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+    </string-array>
+
     <string-array name="spinner_time">
         <item>모두가능</item>
         <item>평일</item>
@@ -23,31 +163,31 @@
     </string-array>
 
     <string-array name="spinner_borough_seoul">
-        <item>광진구</item>
-        <item>동대문구</item>
-        <item>중랑구</item>
-        <item>용산구</item>
-        <item>성동구</item>
+        <item>강남구</item>
+        <item>강동구</item>
         <item>강북구</item>
-        <item>도봉구</item>
-        <item>노원구</item>
-        <item>은평구</item>
-        <item>서대문구</item>
-        <item>마포구</item>
-        <item>양천구</item>
-        <item>가서구</item>
+        <item>강서구</item>
+        <item>관악구</item>
+        <item>광진구</item>
         <item>구로구</item>
         <item>금천구</item>
-        <item>영등포구</item>
+        <item>노원구</item>
+        <item>도봉구</item>
+        <item>동대문구</item>
         <item>동작구</item>
-        <item>관악구</item>
+        <item>마포구</item>
+        <item>서대문구</item>
         <item>서초구</item>
-        <item>강남구</item>
+        <item>성동구</item>
+        <item>성북구</item>
         <item>송파구</item>
-        <item>강동구</item>
+        <item>양천구</item>
+        <item>영등포구</item>
+        <item>용산구</item>
+        <item>은평구</item>
         <item>종로구</item>
         <item>중구</item>
-        <item>성북구</item>
+        <item>중랑구</item>
     </string-array>
 
     <string-array name="spinner_borough_gyungki">

@@ -48,6 +48,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin">
 
                 <Button
+                    android:id="@+id/btn_search"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="검색"

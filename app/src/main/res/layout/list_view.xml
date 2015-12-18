@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:id="@+id/listitem"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -14,9 +16,9 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -24,25 +26,25 @@
                     android:text="제목 : " />
 
                 <EditText
-                    android:singleLine="true"
-                    android:editable="false"
-                    android:textColor="@android:color/black"
                     android:id="@+id/edit_title"
-                    android:enabled="false"
-                    android:focusable="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:contextClickable="false"
+                    android:editable="false"
                     android:ellipsize="end"
                     android:ems="15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,18 +52,18 @@
                     android:text="마감날짜 : " />
 
                 <EditText
-                    android:editable="false"
-                    android:singleLine="true"
-                    android:textColor="@android:color/black"
-                    android:enabled="false"
-                    android:focusable="false"
+                    android:id="@+id/edit_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:clickable="false"
                     android:contextClickable="false"
+                    android:editable="false"
                     android:ellipsize="end"
-                    android:id="@+id/edit_finish"
                     android:ems="14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
 
             </LinearLayout>
         </LinearLayout>

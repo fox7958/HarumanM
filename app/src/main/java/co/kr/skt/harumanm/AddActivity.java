@@ -23,12 +23,14 @@ public class AddActivity extends AppCompatActivity implements NavigationView.OnN
     ArrayAdapter<CharSequence> boroughspin;
     ArrayAdapter<CharSequence> timespin;
     ArrayAdapter<CharSequence> typespin;
+    ArrayAdapter<CharSequence> monthspin;
+    ArrayAdapter<CharSequence> dayspin;
     float backup;
 
-    Button btnInsert, btnMonthUp, btnMonthDown, btnDayUp, btnDayDown;
-    CardView cardInsert, cardMonthUp, cardMonthDown, cardDayUp, cardDayDown;
+    Button btnInsert;
+    CardView cardInsert;
 
-    Spinner spinnerTown, spinnerBorough, spinnerTime, spinnerType;
+    Spinner spinnerTown, spinnerBorough, spinnerTime, spinnerType, spinnerMonth, spinnerDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,17 +38,7 @@ public class AddActivity extends AppCompatActivity implements NavigationView.OnN
         setContentView(R.layout.content_add);
 
         btnInsert = (Button) findViewById(R.id.btn_insert);
-        btnMonthUp = (Button) findViewById(R.id.btn_monthup);
-        btnMonthDown = (Button) findViewById(R.id.btn_monthdown);
-        btnDayUp = (Button) findViewById(R.id.btn_dayup);
-        btnDayDown = (Button) findViewById(R.id.btn_daydown);
-
         cardInsert = (CardView) findViewById(R.id.card_insert);
-        cardMonthUp = (CardView) findViewById(R.id.card_monthup);
-        cardMonthDown = (CardView) findViewById(R.id.card_monthdown);
-        cardDayUp = (CardView) findViewById(R.id.card_dayup);
-        cardDayDown = (CardView) findViewById(R.id.card_daydown);
-
         spinnerTown = (Spinner) findViewById(R.id.spinner_town);
         spinnerBorough = (Spinner) findViewById(R.id.spinner_borough);
         spinnerTime = (Spinner)findViewById(R.id.spinner_time);
@@ -68,69 +60,6 @@ public class AddActivity extends AppCompatActivity implements NavigationView.OnN
             }
         });
 
-        btnMonthUp.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                int action = event.getAction();
-
-                if (action == event.ACTION_DOWN) {
-                    backup = cardMonthUp.getCardElevation();
-                    cardMonthUp.setCardElevation(0.0f);
-                } else if (action == event.ACTION_UP) {
-                    cardMonthUp.setCardElevation(backup);
-                }
-                return true;
-            }
-        });
-
-        btnMonthDown.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                int action = event.getAction();
-
-                if (action == event.ACTION_DOWN) {
-                    backup = cardMonthDown.getCardElevation();
-                    cardMonthDown.setCardElevation(0.0f);
-                } else if (action == event.ACTION_UP) {
-                    cardMonthDown.setCardElevation(backup);
-                }
-                return true;
-            }
-        });
-
-        btnDayUp.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                int action = event.getAction();
-
-                if (action == event.ACTION_DOWN) {
-                    backup = cardDayUp.getCardElevation();
-                    cardDayUp.setCardElevation(0.0f);
-                } else if (action == event.ACTION_UP) {
-                    cardDayUp.setCardElevation(backup);
-                }
-                return true;
-            }
-        });
-
-        btnDayDown.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-
-                int action = event.getAction();
-
-                if (action == event.ACTION_DOWN) {
-                    backup = cardDayDown.getCardElevation();
-                    cardDayDown.setCardElevation(0.0f);
-                } else if (action == event.ACTION_UP) {
-                    cardDayDown.setCardElevation(backup);
-                }
-                return true;
-            }
-        });
         townspin = ArrayAdapter.createFromResource(this, R.array.spinner_town, R.layout.support_simple_spinner_dropdown_item);
         townspin.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         timespin = ArrayAdapter.createFromResource(this, R.array.spinner_time, R.layout.support_simple_spinner_dropdown_item);
@@ -140,6 +69,82 @@ public class AddActivity extends AppCompatActivity implements NavigationView.OnN
         spinnerTown.setAdapter(townspin);
         spinnerTime.setAdapter(timespin);
         spinnerType.setAdapter(typespin);
+
+        spinnerMonth = (Spinner) findViewById(R.id.spinner_Month);
+        spinnerDay = (Spinner) findViewById(R.id.spinner_day);
+        monthspin = ArrayAdapter.createFromResource(this, R.array.month, R.layout.support_simple_spinner_dropdown_item);
+        monthspin.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinnerMonth.setAdapter(monthspin);
+
+        spinnerMonth.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (mInitSpinner == false) {
+                    mInitSpinner = true;
+                }
+                String month = (String) monthspin.getItem(position);
+                if (month.equals("1") || month.equals("3") || month.equals("5") || month.equals("7") || month.equals("8") || month.equals("10") || month.equals("12")) {
+                    dayspin = ArrayAdapter.createFromResource(AddActivity.this, R.array.day_31, R.layout.support_simple_spinner_dropdown_item);
+                    dayspin.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                    spinnerDay.setAdapter(dayspin);
+
+                    spinnerDay.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if (mInitSpinner == false) {
+                                mInitSpinner = true;
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                } else if (month.equals("2")) {
+                    dayspin = ArrayAdapter.createFromResource(AddActivity.this, R.array.day_29, R.layout.support_simple_spinner_dropdown_item);
+                    dayspin.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                    spinnerDay.setAdapter(dayspin);
+
+                    spinnerDay.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if (mInitSpinner == false) {
+                                mInitSpinner = true;
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                } else {
+                    dayspin = ArrayAdapter.createFromResource(AddActivity.this, R.array.day_30, R.layout.support_simple_spinner_dropdown_item);
+                    dayspin.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+                    spinnerDay.setAdapter(dayspin);
+
+                    spinnerDay.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                        @Override
+                        public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                            if (mInitSpinner == false) {
+                                mInitSpinner = true;
+                            }
+                        }
+
+                        @Override
+                        public void onNothingSelected(AdapterView<?> parent) {
+
+                        }
+                    });
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         spinnerTime.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
