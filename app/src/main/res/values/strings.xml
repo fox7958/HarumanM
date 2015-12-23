@@ -4,6 +4,7 @@
     <string name="spinner">지역을 선택해주세요.</string>
 
     <string-array name="year">
+        <item>====</item>
         <item>1980</item>
         <item>1981</item>
         <item>1982</item>
@@ -30,6 +31,7 @@
     </string-array>
 
     <string-array name="month">
+        <item>==</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -45,6 +47,7 @@
     </string-array>
 
     <string-array name="day_31">
+        <item>==</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -79,6 +82,7 @@
     </string-array>
 
     <string-array name="day_30">
+        <item>==</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -112,6 +116,7 @@
     </string-array>
 
     <string-array name="day_29">
+        <item>==</item>
         <item>1</item>
         <item>2</item>
         <item>3</item>
@@ -144,6 +149,7 @@
     </string-array>
 
     <string-array name="spinner_time">
+        <item>========</item>
         <item>모두가능</item>
         <item>평일</item>
         <item>평일야간</item>
@@ -151,18 +157,21 @@
     </string-array>
 
     <string-array name="spinner_type">
-        <item>서빙○주방</item>
+        <item>==========</item>
+        <item>서빙or주방</item>
         <item>매장관리</item>
         <item>서비스</item>
-        <item>생산○기능</item>
+        <item>생산or기능</item>
     </string-array>
 
     <string-array name="spinner_town">
+        <item>======</item>
         <item>서울시</item>
         <item>경기도</item>
     </string-array>
 
     <string-array name="spinner_borough_seoul">
+        <item>======</item>
         <item>강남구</item>
         <item>강동구</item>
         <item>강북구</item>
@@ -191,6 +200,7 @@
     </string-array>
 
     <string-array name="spinner_borough_gyungki">
+        <item>======</item>
         <item>수원시</item>
         <item>고양시</item>
         <item>성남시</item>

@@ -61,6 +61,7 @@
                         android:text="제목 : " />
 
                     <EditText
+                        android:id="@+id/edit_title_add"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
@@ -136,6 +137,7 @@
                         android:layout_marginLeft="20dp">
 
                         <EditText
+                            android:id="@+id/edit_pay_add"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="7"
@@ -316,6 +318,7 @@
                         android:gravity="center">
 
                         <EditText
+                            android:id="@+id/edit_minage_add"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="2"
@@ -331,9 +334,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="    ~" />
+                            android:text="    ~         " />
 
                         <EditText
+                            android:id="@+id/edit_maxage_add"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ems="2"
@@ -376,6 +380,7 @@
                             android:gravity="center">
 
                             <CheckBox
+                                android:id="@+id/check_m_add"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
@@ -393,6 +398,7 @@
                             android:gravity="center">
 
                             <CheckBox
+                                android:id="@+id/check_f_add"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content" />
 
@@ -433,6 +439,7 @@
                                 android:layout_height="match_parent">
 
                                 <EditText
+                                    android:id="@+id/edit_content_add"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:maxLength="250" />
@@ -441,6 +448,69 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/town_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                </FrameLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/borough_save"/>
+            </FrameLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/time_save"/>
+            </FrameLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/month_save"/>
+            </FrameLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/day_save"/>
+            </FrameLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/type_save"/>
+            </FrameLayout>
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gender_save"/>
+            </FrameLayout>
         </android.support.v7.widget.CardView>
     </LinearLayout>
 </ScrollView>
