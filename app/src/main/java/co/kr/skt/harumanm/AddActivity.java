@@ -338,6 +338,8 @@ public class AddActivity extends AppCompatActivity implements NavigationView.OnN
                     Snackbar.make(v.getRootView(),"지역을 선택해주세요.", Snackbar.LENGTH_SHORT).show();
                 }else if (editPay.getText().toString().trim().equalsIgnoreCase("")){
                     Snackbar.make(v.getRootView(),"급여를 입력해주세요.", Snackbar.LENGTH_SHORT).show();
+                } else if (Integer.parseInt(editPay.getText().toString()) < 6030) {
+                    Snackbar.make(v.getRootView(), "최저시급 미만으로 설정할 수 없습니다.", Snackbar.LENGTH_SHORT).show();
                 }else if (timeSave.getText().toString().trim().equalsIgnoreCase("")){
                     Snackbar.make(v.getRootView(),"시간대를 선택해주세요.", Snackbar.LENGTH_SHORT).show();
                 }else if (monthSave.getText().toString().trim().equalsIgnoreCase("==")||monthSave.getText().toString().equalsIgnoreCase("")){
